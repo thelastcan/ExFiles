@@ -180,6 +180,7 @@
             this.ClientFilesTree.Name = "ClientFilesTree";
             this.ClientFilesTree.Size = new System.Drawing.Size(389, 418);
             this.ClientFilesTree.TabIndex = 0;
+            this.ClientFilesTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.ClientFilesTree_AfterSelect);
             // 
             // groupBox3
             // 
@@ -233,20 +234,20 @@
             this.newFolderToolStripMenuItem,
             this.deleteFolderFileToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(167, 48);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenuStrip1_Opening);
             // 
             // newFolderToolStripMenuItem
             // 
             this.newFolderToolStripMenuItem.Name = "newFolderToolStripMenuItem";
-            this.newFolderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newFolderToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.newFolderToolStripMenuItem.Text = "New Folder";
             this.newFolderToolStripMenuItem.Click += new System.EventHandler(this.NewFolderToolStripMenuItem_Click);
             // 
             // deleteFolderFileToolStripMenuItem
             // 
             this.deleteFolderFileToolStripMenuItem.Name = "deleteFolderFileToolStripMenuItem";
-            this.deleteFolderFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteFolderFileToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.deleteFolderFileToolStripMenuItem.Text = "Delete Folder/File";
             this.deleteFolderFileToolStripMenuItem.Click += new System.EventHandler(this.DeleteFolderFileToolStripMenuItem_Click);
             // 

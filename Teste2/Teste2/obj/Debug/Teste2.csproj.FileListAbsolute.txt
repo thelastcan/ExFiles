@@ -11,3 +11,16 @@ C:\Users\aspha\source\repos\Teste2\Teste2\obj\Debug\Teste2.csproj.CopyComplete
 C:\Users\aspha\source\repos\Teste2\Teste2\obj\Debug\Teste2.exe
 C:\Users\aspha\source\repos\Teste2\Teste2\obj\Debug\Teste2.pdb
 C:\Users\aspha\source\repos\Teste2\Teste2\obj\Debug\Teste2.csprojAssemblyReference.cache
+C:\Users\aspha\Downloads\Teste2\Teste2\bin\Debug\Teste2.exe.config
+C:\Users\aspha\Downloads\Teste2\Teste2\bin\Debug\Teste2.exe
+C:\Users\aspha\Downloads\Teste2\Teste2\bin\Debug\Teste2.pdb
+C:\Users\aspha\Downloads\Teste2\Teste2\bin\Debug\FluentFTP.dll
+C:\Users\aspha\Downloads\Teste2\Teste2\bin\Debug\FluentFTP.xml
+C:\Users\aspha\Downloads\Teste2\Teste2\obj\Debug\Teste2.csprojAssemblyReference.cache
+C:\Users\aspha\Downloads\Teste2\Teste2\obj\Debug\Teste2.Form1.resources
+C:\Users\aspha\Downloads\Teste2\Teste2\obj\Debug\Teste2.Properties.Resources.resources
+C:\Users\aspha\Downloads\Teste2\Teste2\obj\Debug\Teste2.csproj.GenerateResource.cache
+C:\Users\aspha\Downloads\Teste2\Teste2\obj\Debug\Teste2.csproj.CoreCompileInputs.cache
+C:\Users\aspha\Downloads\Teste2\Teste2\obj\Debug\Teste2.csproj.CopyComplete
+C:\Users\aspha\Downloads\Teste2\Teste2\obj\Debug\Teste2.exe
+C:\Users\aspha\Downloads\Teste2\Teste2\obj\Debug\Teste2.pdb

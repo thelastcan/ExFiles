@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Net;
 using System.Threading;
 using Microsoft.VisualBasic;
+using System.IO;
+
 
 namespace Teste2
 {
@@ -139,6 +141,17 @@ namespace Teste2
         private void Form1_Load(object sender, EventArgs e)
         {
             ServerFilesTree.ContextMenuStrip = contextMenuStrip1;
+
+            DriveInfo[] alldrives = DriveInfo.GetDrives();
+            var i = 0;
+            foreach (DriveInfo info in alldrives)
+            {
+                ClientFilesTree.Nodes.Add(info.Name);
+                ClientFilesTree.Nodes[i].Tag = info.Name;
+                MessageBox.Show("Dive Name: " + ClientFilesTree.Nodes[i].Text + "Tag: " + ClientFilesTree.Nodes[i].Tag.ToString());
+                i = i + 1;
+            }
+
         }
 
         private void ContextMenuStrip1_Opening(object sender, CancelEventArgs e)
@@ -209,6 +222,47 @@ namespace Teste2
                 }
             }
             
+        }
+
+        private void ClientFilesTree_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            bool checkVar = false;
+            try
+            {
+                foreach (String DirectoryToadd in Directory.GetDirectories(ClientFilesTree.SelectedNode.Tag.ToString()))
+                {
+                    foreach(TreeNode NodeToCheck in ClientFilesTree.SelectedNode.Nodes)
+                    {
+                        if (DirectoryToadd.Replace(ClientFilesTree.SelectedNode.Tag.ToString(), "") == NodeToCheck.Text)
+                        {
+                            checkVar = true;
+                            break;
+                        }
+                        if (DirectoryToadd.Replace(ClientFilesTree.SelectedNode.Tag.ToString() + @"\", "") == NodeToCheck.Text)
+                        {
+                            checkVar = true;
+                            break;
+                        }
+                    }
+                    if (!checkVar)
+                    {
+                        if (DirectoryToadd.Replace(ClientFilesTree.SelectedNode.Tag.ToString(), "").Contains(@"\"))
+                        {
+                            ClientFilesTree.SelectedNode.Nodes.Add(DirectoryToadd.Replace(ClientFilesTree.SelectedNode.Tag.ToString() + @"\", ""));
+                        }
+                        else
+                        {
+                            ClientFilesTree.SelectedNode.Nodes.Add(DirectoryToadd.Replace(ClientFilesTree.SelectedNode.Tag.ToString(), ""));
+                        }
+                        ClientFilesTree.SelectedNode.LastNode.Tag = DirectoryToadd;
+                    }
+                    checkVar = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro Accessing Directory");
+            }
         }
     }
 }
